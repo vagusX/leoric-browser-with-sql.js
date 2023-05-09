@@ -11,6 +11,8 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {
       fs: false,
+      path: false,
+      crypto: false,
     },
   },
   context: resolve(__dirname, '../../src'),
@@ -33,7 +35,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new NodePolyfillPlugin(),
+    new NodePolyfillPlugin({
+      includeAliases: ['util', 'process'],
+    }),
     new HtmlWebpackPlugin({ template: 'index.html.ejs' }),
     new CopyWebpackPlugin({
       patterns: [
