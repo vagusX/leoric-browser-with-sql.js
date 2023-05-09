@@ -5,7 +5,8 @@ const { resolve } = require('path');
 const commonConfig = require('./common');
 
 module.exports = merge(commonConfig, {
-  mode: 'production',
+  // mode: 'production',
+  mode: 'development',
   output: {
     filename: 'js/bundle.[contenthash].min.js',
     path: resolve(__dirname, '../../dist'),

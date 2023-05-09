@@ -11,7 +11,9 @@ class ORM {
       logger,
       initSqlJs: async (options) => {
         const { default: initSqlJs } = await import('sql.js');
-        const SQL = await initSqlJs();
+        const SQL = await initSqlJs({
+          locateFile: () => '/sql-wasm.wasm',
+        });
         const { data = null, name, version } = options;
         const database = new SQL.Database(data);
 

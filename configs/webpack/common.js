@@ -47,5 +47,9 @@ module.exports = {
       /^perf_hooks$/,
       resolve(__dirname, '../../src/dummy/perf_hooks.js'),
     ),
+    new webpack.NormalModuleReplacementPlugin(
+      /^assert$/,
+      resolve(__dirname, '../../src/dummy/assert.js'),
+    ),
   ],
 };
