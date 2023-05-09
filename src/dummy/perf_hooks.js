@@ -1,0 +1,1 @@
+exports.performance = window.performance;
