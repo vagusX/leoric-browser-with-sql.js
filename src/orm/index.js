@@ -1,5 +1,5 @@
 import Realm from 'leoric';
-import SqlJSDriver from 'leoric/src/drivers/sqljs';
+import SqlJSDriver from 'leoric/dist/drivers/sqljs';
 
 class ORM {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
